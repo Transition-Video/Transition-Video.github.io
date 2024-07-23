@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    flex-direction: column;
+}
+
+.slideshow {
+    position: relative;
+    width: 40%; /* Sesuaikan lebar agar sesuai dengan gambar potret */
+    max-width: 400px; /* Batas maksimal lebar untuk gambar potret */
+    overflow: hidden;
+    border-radius: 15px; /* Radius sudut untuk slideshow */
+    margin-bottom: 20px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slides img {
+    width: 100%;
+    height: auto; /* Pastikan aspek rasio tetap terjaga */
+    flex-shrink: 0;
+    object-fit: cover; /* Mengisi elemen dengan mengubah ukuran gambar jika perlu */
+    border-radius: 15px; /* Radius sudut untuk gambar */
+}
+
+#playButton {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
